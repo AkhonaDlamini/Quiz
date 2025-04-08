@@ -1,0 +1,96 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.start-quiz {
+    position: absolute;       /* Takes element out of normal document flow */
+    top: 50%;                /* Positions top edge at 50% of parent height */
+    left: 50%;               /* Positions left edge at 50% of parent width */
+    transform: translate(-50%, -50%); /* Shifts element back by half its own width/height */
+    width: 80%;              /* Sets width to 80% of parent */
+    max-width: 600px;        /* But never wider than 600px */
+    background: #f8f8f8;     /* Darker white background (off-white) */
+    border-radius: 10px;     /* Rounded corners */
+    padding: 40px;           /* Internal spacing */
+    text-align: center;      /* Centers text content horizontally */
+    margin: 0;               /* Removes default margins */
+}
+
+.startQuizBtn {
+    width: 500px;
+    height: 150px;
+    font-size: 80px;
+    border: 0;
+    border-radius: 5px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(106, 48, 147, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+* {
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box   ;
+}
+
+.quiz-form {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(106, 48, 147, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    text-align: center;
+    display: none;
+}
+
+.timer {
+    font-size: 150px;
+    text-align: center;
+}
+
+.quiz-timer {
+    height:50vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+label {
+    font-size: 25px;
+}
+
+.submitAnswer {
+    font-size: 25px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.question {
+    display: none;
+    height: 50vh;
+}
+
+button {
+    margin: 10px 5px;
+    width: 75px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.question.active {
+    display: block;
+}
+
+p{
+    font-size: 18px;
+}
+

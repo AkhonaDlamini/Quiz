@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <title>Online Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <div class="start-quiz">
+            <h1>Welcome to the HTML Quiz!</h1>
+            <p>Test your knowledge of HTML with this 10-question quiz.</p>
+            <p>You'll have 5 minutes to complete it.</p>
+            <button onclick="startQuiz()" class="startQuizBtn">Start Quiz!</button>
+        </div>
+
+        <div class="quiz-timer">
+            <h1 class="timer">5:00</h1>
+        </div>
+
+        <form class="quiz-form">
+            <div class="question active">
+                <h3>1. What is the purpose of the HTML iframe tag?</h3>
+                <label><input type="radio" name="question-one" value="A">To display a web page within a web page</label><br>
+                <label><input type="radio" name="question-one" value="B">To create a form</label><br>
+                <label><input type="radio" name="question-one" value="C">To define a paragraph</label><br>
+                <label><input type="radio" name="question-one" value="D">To embed a video</label><br><br>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+            
+            <div class="question">
+                <h3>2. What does a block-level element do?</h3>
+                <label><input type="radio" name="question-two" value="A">Starts a new line</label><br>
+                <label><input type="radio" name="question-two" value="B">Is always inline</label><br>
+                <label><input type="radio" name="question-two" value="C">Does not take up full wclassth</label><br>
+                <label><input type="radio" name="question-two" value="D">Is only used for images</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div class="question">
+                <h3>3. Which of the following is an example of a semantic element?</h3>
+                <label><input type="radio" name="question-three" value="A">div</label><br>
+                <label><input type="radio" name="question-three" value="B">span</label><br>
+                <label><input type="radio" name="question-three" value="C">article</label><br>
+                <label><input type="radio" name="question-three" value="D">p</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div class="question">
+                <h3>4. What attribute specifies where to send the form-data when a form is submitted?</h3>
+                <label><input type="radio" name="question-four" value="A">method</label><br>
+                <label><input type="radio" name="question-four" value="B">action</label><br>
+                <label><input type="radio" name="question-four" value="C">name</label><br>
+                <label><input type="radio" name="question-four" value="D">autocomplete</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+            
+            <div class="question">
+                <h3>5. What does the script tag define in HTML?</h3>
+                <label><input type="radio" name="question-five" value="A">A client-side script</label><br>
+                <label><input type="radio" name="question-five" value="B">A server-side script</label><br>
+                <label><input type="radio" name="question-five" value="C">A CSS style</label><br>
+                <label><input type="radio" name="question-five" value="D">An HTML comment</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div class="question">
+                <h3>6. What is the correct syntax for opening the form's result in a new browser tab?</h3>
+                <label><input type="radio" name="question-six" value="A">form action='/action_page.php' target='_blank'</label><br>
+                <label><input type="radio" name="question-six" value="B"> form action='/action_page.php' target='_top'</label><br>
+                <label><input type="radio" name="question-six" value="C"> form action='/action_page.php' target='_new'</label><br>
+                <label><input type="radio" name="question-six" value="D"> form action='/action_page.php' target='_self'</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>    
+            </div>
+
+            <div class="question">
+                <h3>7. What does the input type='month' allow the user to select?</h3>
+                <label><input type="radio" name="question-seven" value="A">A month and year</label><br>
+                <label><input type="radio" name="question-seven" value="B"> A day</label><br>
+                <label><input type="radio" name="question-seven" value="C"> A year only</label><br>
+                <label><input type="radio" name="question-seven" value="D"> A week</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+
+            <div class="question">
+                <h3>8. What is the purpose of the class attribute in HTML?</h3>
+                <label><input type="radio" name="question-eight" value="A"> To specify a unique class for an HTML element</label><br> 
+                <label><input type="radio" name="question-eight" value="B"> To define a class for styling</label><br>
+                <label><input type="radio" name="question-eight" value="C"> To create a hyperlink </label><br>
+                <label><input type="radio" name="question-eight" value="D"> To embed a vclasseo</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+            
+            <div class="question">
+                <h3>9. What does the input type='checkbox' define?</h3>
+                <label><input type="radio" name="question-nine" value="A"> A checkbox for selecting options</label><br>
+                <label><input type="radio" name="question-nine" value="B"> A text input field</label><br>
+                <label><input type="radio" name="question-nine" value="C"> A radio button</label><br>
+                <label><input type="radio" name="question-nine" value="D"> A hclassden input</label><br><br>
+                   <button type="button" name="previous" class="previous" onclick="prevQuestion()">Previous</button>
+                <button type="button" name="next" class="next" onclick="nextQuestion()">Next</button>
+            </div>
+            
+            <div class="question">
+                <h3>10. What is the function of the label tag in a form?</h3>
+                <label><input type="radio" name="question-ten" value="A">To define a label for an input element</label><br>
+                <label><input type="radio" name="question-ten" value="B">To create a new form</label><br>
+                <label><input type="radio" name="question-ten" value="C">To submit the form</label><br>
+                <label><input type="radio" name="question-ten" value="D">To style the form</label><br><br>
+                <button type="button" class="previous" onclick="prevQuestion()">Previous</button><br><br>
+                <button type="submit" class="submitAnswer">Submit</button>
+            </div>
+
+            <!--Display Results-->
+            <p class="result"><p>
+
+                <!-- Add this below the result display -->
+<div class="review-answers" style="display: none;">
+    <h3>Review Your Answers:</h3>
+    <div id="answers-comparison"></div>
+</div>
+    </form>
+
+<script src="script.js"></script>
+</body>
+</html>
