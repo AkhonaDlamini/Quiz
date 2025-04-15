@@ -12,7 +12,8 @@ submit quiz button is clicked it checks if all questions are answered. Submissio
 website shows total score, highlights correct/incorrect answers for review and displays time taken to complete.
 
 # ADDITIONAL FEATURES
-There are no additional features.
+Added countdown timer at the top of the quiz interface.
+Added animations and handled errors appropriately.
 
 # REQUIRED FEATURES
 The timer is not working appropriately.
