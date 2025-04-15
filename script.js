@@ -17,6 +17,7 @@ let currentQuestion = 0;
 let timeleft = 300; // 5 minutes in seconds
 let timer;
 let userAnswers = {}; // stores user answers
+const totalQuestions = Object.keys(correctAnswers).length; // Gets the total number of answers
 
 // DOM elements
 const startQuizBtn = document.querySelector(".start-quiz");
@@ -26,6 +27,7 @@ const timerDisplay = document.querySelector(".timer");
 const resultDisplay = document.querySelector(".result");
 const reviewSection = document.querySelector(".review-answers");
 const comparisonContainer = document.getElementById("answers-comparison");
+const progressBar = document.getElementById("progress-bar"); // get progress bar
 
 // function to start the quiz
 function startQuiz() {
@@ -33,6 +35,7 @@ function startQuiz() {
     quizForm.style.display = "block";
     quizTimer.style.display = "block";
     showQuestion(currentQuestion);
+    updateProgressBar(currentQuestion, totalQuestions); // Calling the progress functionality
     startTimer();
 }
 
@@ -45,6 +48,14 @@ function showQuestion(index) {
             question.classList.add("active");
         }
     });
+
+    updateProgressBar(index, totalQuestions);
+}
+
+// Update progress bar function
+function updateProgressBar(currentIndex, total){
+    const percent = ((currentIndex + 1) / total) * 100;
+    progressBar.style.width = percent + "%";
 }
 
 // next question with validation
@@ -66,8 +77,11 @@ function nextQuestion() {
 // previous question
 function prevQuestion() {
     currentQuestion--;
-    if (currentQuestion < 0) currentQuestion = 0;
+    if (currentQuestion < 0){
+
+    currentQuestion = 0;
     showQuestion(currentQuestion);
+    }
 }
 
 // Timer functionality
