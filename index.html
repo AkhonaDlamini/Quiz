@@ -21,6 +21,10 @@
             <h1 class="timer">5:00</h1>
         </div>
 
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+          </div>          
+
         <form class="quiz-form">
             <div class="question active">
                 <h3>1. What is the purpose of the HTML iframe tag?</h3>
@@ -118,17 +122,18 @@
                 <label><input type="radio" name="question-ten" value="C">To submit the form</label><br>
                 <label><input type="radio" name="question-ten" value="D">To style the form</label><br><br>
                 <button type="button" class="previous" onclick="prevQuestion()">Previous</button><br><br>
-                <button type="submit" class="submitAnswer">Submit</button>
+                <!-- No "Next" button here — only "Submit" -->
+                <button type="submit" class="submitAnswer">Submit</button>                
             </div>
 
             <!--Display Results-->
             <p class="result"><p>
 
                 <!-- Add this below the result display -->
-<div class="review-answers" style="display: none;">
-    <h3>Review Your Answers:</h3>
-    <div id="answers-comparison"></div>
-</div>
+            <div class="review-answers" style="display: none;">
+                <h3>Review Your Answers:</h3>
+                <div id="answers-comparison"></div>
+            </div>
     </form>
 
 <script src="script.js"></script>

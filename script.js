@@ -71,7 +71,13 @@ function nextQuestion() {
 
     userAnswers[questionName] = selectedOption.value;
     currentQuestion++;
-    showQuestion(currentQuestion);
+    
+    if (currentQuestion >= totalQuestions) {
+        submitQuiz(); // Automatically submit if it's the last question
+    } else {
+        showQuestion(currentQuestion);
+    }
+
 }
 
 // previous question
